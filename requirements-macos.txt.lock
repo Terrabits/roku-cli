@@ -1,0 +1,8 @@
+certifi==2023.11.17
+charset-normalizer==3.3.2
+idna==3.4
+requests==2.31.0
+roku==4.1.0
+# Editable Git install with no remote (roku-cli==1.0.0b1)
+-e /Users/lalic/Documents/Python/roku-cli
+urllib3==2.1.0

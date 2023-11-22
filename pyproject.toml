@@ -1,0 +1,42 @@
+[build-system]
+requires      = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "roku-cli"
+authors = [{name  = "Nick Lalic", email = "nick.lalic@gmail.com"}]
+description     = "Roku command line interface and python REPL"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.5"
+keywords = [
+  "roku",
+  "command-line",
+  "cli",
+  "python",
+  "repl",
+]
+classifiers  = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "roku >=4.1.0, <5"
+]
+dynamic = [
+  "readme",
+  "version",
+]
+
+
+[project.scripts]
+roku = "roku_cli.main:main"
+
+
+[tool.setuptools.dynamic]
+readme  = { file = ["README.md"] }
+version = { attr = "roku_cli.VERSION" }
+
+
+[tool.setuptools.package-dir]
+roku_cli = 'roku_cli'
