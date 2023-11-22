@@ -1,7 +1,7 @@
 from   .command_line       import parse
 from   .return_code        import ReturnCode
 from   code                import interact
-from   requests.exceptions import ConnectTimeout, ConnectionError
+from   requests.exceptions import ConnectTimeout, ConnectionError, ReadTimeout
 from   roku                import Roku
 from   socket              import gaierror
 import sys
@@ -96,6 +96,12 @@ def main():
     except REQUEST_ERRORS:
         print(f'error: connection failed')
         sys.exit(ReturnCode.ERROR_CONNECTION_TIMED_OUT)
+
+
+    # read timed out?
+    except ReadTimeout:
+        print('error: request timed out')
+        sys.exit(ReturnCode.ERROR_REQUEST_TIMED_OUT)
 
 
 # execute as main?

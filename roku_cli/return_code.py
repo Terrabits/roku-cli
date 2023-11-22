@@ -5,10 +5,11 @@ class ReturnCode(IntEnum):
 
     SUCCESS = 0
 
-    # errors  
+    # errors
 
     ERROR_TOO_MANY_EXE_ARGS    = 1
     ERROR_COMMAND_MISSING      = 2
     ERROR_APP_NOT_FOUND        = 3
     ERROR_COMMAND_NOT_FOUND    = 4
     ERROR_CONNECTION_TIMED_OUT = 5
+    ERROR_REQUEST_TIMED_OUT    = 6
