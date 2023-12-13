@@ -54,7 +54,7 @@ def parse():
 
 
     # are there too many executable arguments?
-    if len(exe_args) > 1:
+    if too_many_exe_args:
         parser.print_usage()
         exe_args_str = ', '.join([f"'{arg}'" for arg in sorted(exe_args)])
         print(f'error: arguments {exe_args_str} cannot be used together')
@@ -62,7 +62,7 @@ def parse():
 
 
     # is positional argument `command` missing?
-    if len(exe_args) == 0:
+    if no_exe_args:
         parser.print_usage()
         print("error: positional argument 'command' is missing")
         sys.exit(ReturnCode.ERROR_COMMAND_MISSING)
