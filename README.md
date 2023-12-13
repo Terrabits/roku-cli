@@ -49,6 +49,8 @@ Argument `--list-commands` prints a list of supported commands. These commands c
 
 ## References
 
-This package is simply a wrapper for python package `roku`. For more information, see:
+This package is simply a wrapper for the python package `roku`.
+
+For more information, see:
 
 [https://github.com/jcarbaugh/python-roku](https://github.com/jcarbaugh/python-roku)
